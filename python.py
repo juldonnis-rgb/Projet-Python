@@ -2,7 +2,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-print(f"Version pandas: {pd.**version**}")      # vérifier que pandas est bien installé
+print(f"Version pandas: {pd.__version__}")      # vérifier que pandas est bien installé
 df = pd.read_csv(r"animes.csv")                 # clean la data 
 print("✅ Fichier chargé avec succès !")
 df.head
