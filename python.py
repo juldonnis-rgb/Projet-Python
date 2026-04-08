@@ -1,17 +1,16 @@
-# projet_python
 
 import pandas as pd
 import matplotlib.pyplot as plt
-print(f"Version pandas: {pd.__version__}")      # vérifier que pandas est bien installé
+
+
+print(f"Version pandas: {pd.__version__}")      # bien vérifier qu'il y a une version de pandas
 df = pd.read_csv(r"animes.csv")                 # clean la data 
-print("✅ Fichier chargé avec succès !")
 df.head
 
-# Taille du tableau
 
 lignes, colonnes = df.shape
 
-print(f"\n📊 Notre tableau contient :")         # j'ai rajouté "\n" pour que ce soit plus beau à lire(#\n)
+print(f"\n📊 Notre tableau contient :")         # j'ai rajouté "\n" pour que ce soit plus beau à lire (#\n)
 print(f"   ➜ {lignes} animés")
 print(f"   ➜ {colonnes} Types d'informations")
 
@@ -21,7 +20,8 @@ print(f"\nTypes d'informations :")               #\n
 print("-" * 40)
 
 for i, col in enumerate(df.columns, 1):
-print(f"  {i}. {col}")
+    print(f"  {i}. {col}")
+
 # Mettre les noms d'animés en majuscules
 noms_majuscules = df['Anime'].str.upper()
 
@@ -107,8 +107,8 @@ bars = plt.bar(statuts.index, statuts.values, color=couleurs[:len(statuts)])
 # Ajouter les valeurs sur les barres
 
 for bar, val in zip(bars, statuts.values):
-plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
-str(val), ha='center', fontweight='bold', fontsize=12)
+    plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
+    str(val), ha='center', fontweight='bold', fontsize=12)
 
 plt.title(" Nombre d'animés par statut", fontsize=14, fontweight='bold') 
 plt.ylabel("Nombre d'animés")
