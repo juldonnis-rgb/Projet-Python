@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 
 print(f"Version pandas: {pd.__version__}")      # bien vérifier qu'il y a une version de pandas
-df = pd.read_csv(r"animes.csv")                 # clean la data 
+df = pd.read_csv(r"Projet-Python\animes.csv")                 # clean la data 
 df.head
 
 
 lignes, colonnes = df.shape
 
-print(f"\n📊 Notre tableau contient :")         # j'ai rajouté "\n" pour que ce soit plus beau à lire (#\n)
+print(f"\n📊 Notre tableau contient :")         # "\n" pour que ce soit plus beau à lire (#\n)
 print(f"   ➜ {lignes} animés")
 print(f"   ➜ {colonnes} Types d'informations")
 
@@ -22,7 +22,7 @@ print("-" * 40)
 for i, col in enumerate(df.columns, 1):
     print(f"  {i}. {col}")
 
-# Mettre les noms d'animés en majuscules
+# noms d'animés en majuscules
 noms_majuscules = df['Anime'].str.upper()
 
 print(f"\nListes d'animés :")                    #\n
